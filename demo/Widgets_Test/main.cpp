@@ -1,7 +1,7 @@
-﻿#include "Widgets_Test.h"
+﻿#include "widgets_tesT.h"
 #include <QtWidgets/QApplication>
 #include <QDebug>
-#include <qpushbutton.h>
+#include <QPushButton>
 
 int main(int argc, char *argv[])
 {

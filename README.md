@@ -1,6 +1,7 @@
 # Qt_Test
 **The main role of the project:**
 - Qt Widgets Application test code
+- Qt Quick Application test code
 
 **The project support platform:**
 - It supports Windows10:

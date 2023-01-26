@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include <qstring.h>
+#include <QString>
 #include <QtWidgets/QMainWindow>
 #include "ui_Widgets_Test.h"
 

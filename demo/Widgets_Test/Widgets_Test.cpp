@@ -1,7 +1,7 @@
 ﻿#include "Widgets_Test.h"
 #include <string>
-#include <qdebug.h>
-#include <qmessagebox.h>
+#include <QDebug>
+#include <QMessageBox>
 
 Widgets_Test::Widgets_Test(QWidget *parent)
     : QMainWindow(parent)
