@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Widgets_Test", "Widgets_Tes
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quick_Test", "Quick_Test\Quick_Test.vcxproj", "{45B55FD1-3FF3-420B-89EA-1CADDEE91347}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Console_Test", "Console_Test\Console_Test.vcxproj", "{AC88C38A-7EFD-45F2-BC97-6BF9FD7FFCD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{45B55FD1-3FF3-420B-89EA-1CADDEE91347}.Debug|x64.Build.0 = Debug|x64
 		{45B55FD1-3FF3-420B-89EA-1CADDEE91347}.Release|x64.ActiveCfg = Release|x64
 		{45B55FD1-3FF3-420B-89EA-1CADDEE91347}.Release|x64.Build.0 = Release|x64
+		{AC88C38A-7EFD-45F2-BC97-6BF9FD7FFCD0}.Debug|x64.ActiveCfg = Debug|x64
+		{AC88C38A-7EFD-45F2-BC97-6BF9FD7FFCD0}.Debug|x64.Build.0 = Debug|x64
+		{AC88C38A-7EFD-45F2-BC97-6BF9FD7FFCD0}.Release|x64.ActiveCfg = Release|x64
+		{AC88C38A-7EFD-45F2-BC97-6BF9FD7FFCD0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

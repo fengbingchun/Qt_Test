@@ -1,4 +1,4 @@
-#include <QGuiApplication>
+﻿#include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <iostream>
 
@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    // 从C++加载QML对象
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
