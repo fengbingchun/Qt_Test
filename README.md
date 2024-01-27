@@ -8,5 +8,6 @@
 - It supports Windows10:
     - Visual Studio's version is 2022
     - Qt's version is 6.4.2
+    - CMake build(file position: prj/cmake)
 
 **Blog:** [fengbingchun](https://blog.csdn.net/fengbingchun/category_12172633.html)
