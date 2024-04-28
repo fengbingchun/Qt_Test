@@ -50,3 +50,33 @@ add_definitions(-DCMAKE_BUILD_METHOD)
 add_executable(Quick_Test ${SRCS_QUICK}) # you can also use qt_add_executable
 target_link_libraries(Quick_Test PRIVATE Qt6::Gui Qt6::Quick)
 #target_sources(Quick_Test PRIVATE ${SRCS_QUICK_PATH}/qml.qrc) # no need
+
+# install
+set(QT_PATH "C:/Qt/6.8.0/msvc2019_64")
+if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+    set(qt_lib_suffix d)
+else()
+    set(qt_lib_suffix)
+endif()
+
+install(FILES
+    ${QT_PATH}/bin/Qt6Widgets${qt_lib_suffix}.dll
+    ${QT_PATH}/bin/Qt6Gui${qt_lib_suffix}.dll
+    ${QT_PATH}/bin/Qt6Core${qt_lib_suffix}.dll
+    ${QT_PATH}/bin/Qt6Qml${qt_lib_suffix}.dll
+    ${QT_PATH}/bin/Qt6Quick${qt_lib_suffix}.dll
+    ${QT_PATH}/bin/Qt6Network${qt_lib_suffix}.dll
+    DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/install
+)
+
+install(TARGETS
+    Widgets_Test
+    Console_Test
+    Quick_Test
+    DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/install
+)
+
+install(DIRECTORY
+    ${QT_PATH}/plugins/platforms
+    DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/install
+)

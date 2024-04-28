@@ -34,7 +34,7 @@ cmake \
     ..
 result_judgment
 
-cmake --build . --config $1
+cmake --build . --target install --config $1
 result_judgment
 
 echo -e "\033[0;32mbuild finish\033[0m"
