@@ -8,7 +8,7 @@ message(STATUS "current source dir: ${CMAKE_CURRENT_SOURCE_DIR}")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_PREFIX_PATH "C:/Qt/6.8.0/msvc2019_64/lib/cmake/Qt6") # Qt6Config.cmake file location
+set(CMAKE_PREFIX_PATH "D:/Qt/6.8.0/msvc2019_64/lib/cmake/Qt6") # Qt6Config.cmake file location
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Qml Quick)
 qt_standard_project_setup()
@@ -52,7 +52,7 @@ target_link_libraries(Quick_Test PRIVATE Qt6::Gui Qt6::Quick)
 #target_sources(Quick_Test PRIVATE ${SRCS_QUICK_PATH}/qml.qrc) # no need
 
 # install
-set(QT_PATH "C:/Qt/6.8.0/msvc2019_64")
+set(QT_PATH "D:/Qt/6.8.0/msvc2019_64")
 if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
     set(qt_lib_suffix d)
 else()

@@ -12,10 +12,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\demo\Console_Test\main.cpp" />
+    <ClCompile Include="..\..\demo\Console_Test\memory_management.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
     <ClCompile Include="..\..\demo\Console_Test\qdebug.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\demo\Console_Test\common.hpp" />
+    <ClInclude Include="..\..\demo\Console_Test\funset.hpp" />
     <ClInclude Include="..\..\demo\Console_Test\qdebug.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

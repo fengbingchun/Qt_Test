@@ -29,12 +29,18 @@
     <ClCompile Include="..\..\demo\Console_Test\qdebug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\demo\Console_Test\memory_management.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\demo\Console_Test\qdebug.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\demo\Console_Test\common.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\demo\Console_Test\funset.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
