@@ -10,3 +10,6 @@
 /prj/Console_Test/x64/
 prj/cmake/build
 prj/cmake/install
+prj/Widgets_Test/*.user
+prj/Quick_Test/*.user
+prj/Console_Test/*.user
