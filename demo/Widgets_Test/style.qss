@@ -1,0 +1,27 @@
+QWidget {
+    background-color: #87CEEB;
+}
+QTabBar::tab::selected {
+    background: green;
+    color: white;
+}
+QTabBar::tab:!selected {
+    background: gray;
+    color: white;
+}
+QPushButton:hover {
+    color: red;
+}
+QLabel,QLineEdit {
+	color: rgb(0,255,0);
+}
+QCheckBox:hover:checked {
+    color: white
+}
+QRadioButton:hover{
+    color: white
+}
+QRadioButton:checked {
+    background-color: transparent;
+    color: red;
+}
