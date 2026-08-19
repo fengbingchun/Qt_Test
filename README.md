@@ -3,6 +3,8 @@
 - Qt Widgets Application test code
     - Display images in real time through QLabel
     - QSS's usage
+    - menu bar's usage
+    - tool bar's usage
 - Qt Quick Application test code
 - Qt Console Application test code
 

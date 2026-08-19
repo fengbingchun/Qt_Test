@@ -9,6 +9,30 @@ Widgets_Test::Widgets_Test(QWidget *parent)
 {
     ui_.setupUi(this);
 
+    // 菜单栏
+    auto menu_project = ui_.menu_bar->addMenu("网址");
+    auto act_csdn = menu_project->addAction("CSDN网址");
+    menu_project->addSeparator(); // 分隔线
+    connect(act_csdn, &QAction::triggered, this, [this] {
+        QMessageBox::information(this, "CSDN网址", "https://blog.csdn.net/fengbingchun/", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+    });
+
+    auto act_github = menu_project->addAction("GitHub网址");
+    connect(act_github, &QAction::triggered, this, [this] {
+        QMessageBox::information(this, "GitHub网址", "https://github.com/fengbingchun", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+    });
+
+    // 工具栏
+    ui_.main_tool_bar->addAction(act_csdn);
+    ui_.main_tool_bar->addSeparator();
+    ui_.main_tool_bar->addAction(act_github);
+    ui_.main_tool_bar->addSeparator();
+
+    // 禁止拖拽工具栏
+    ui_.main_tool_bar->setMovable(false);
+    ui_.main_tool_bar->setFloatable(false);
+
+
     //connect(this, SIGNAL(get_address(QString)), this, SLOT(set_address(QString))); // 不推荐使用SIGNAL, SLOT
     connect(this, &Widgets_Test::get_address, this, &Widgets_Test::set_address);
 
