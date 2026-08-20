@@ -6,6 +6,7 @@
 #include <thread>
 #include <atomic>
 #include "ui_Widgets_Test.h"
+#include "logger.hpp"
 
 /* Blog:
 * https://blog.csdn.net/fengbingchun/article/details/128727514

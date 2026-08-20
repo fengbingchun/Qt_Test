@@ -60,7 +60,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\soft\opencv\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\soft\opencv\install\include;..\..\src\spdlog\include;..\..\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FBC_LOGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\soft\opencv\install\x64\vc17\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -69,7 +70,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\soft\opencv\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\soft\opencv\install\include;..\..\src\spdlog\include;..\..\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FBC_LOGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\soft\opencv\install\x64\vc17\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -114,6 +116,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\demo\Widgets_Test\main.cpp" />
     <ClCompile Include="..\..\demo\Widgets_Test\Widgets_Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\demo\logger.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

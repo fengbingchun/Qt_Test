@@ -13,3 +13,4 @@ prj/cmake/install
 prj/Widgets_Test/*.user
 prj/Quick_Test/*.user
 prj/Console_Test/*.user
+prj/Widgets_Test/logs
