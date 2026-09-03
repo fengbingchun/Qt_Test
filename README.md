@@ -5,6 +5,7 @@
     - QSS's usage
     - menu bar's usage
     - tool bar's usage
+    - vertical layout's usage
 - Qt Quick Application test code
 - Qt Console Application test code
 

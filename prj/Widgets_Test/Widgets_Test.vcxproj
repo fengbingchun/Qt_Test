@@ -62,6 +62,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>D:\soft\opencv\install\include;..\..\src\spdlog\include;..\..\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FBC_LOGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\soft\opencv\install\x64\vc17\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -72,6 +73,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>D:\soft\opencv\install\include;..\..\src\spdlog\include;..\..\demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FBC_LOGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\soft\opencv\install\x64\vc17\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -100,7 +102,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
