@@ -31,6 +31,9 @@
     <QtMoc Include="..\..\demo\Widgets_Test\Widgets_Test.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="..\..\demo\Widgets_Test\camera_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="..\..\demo\Widgets_Test\Widgets_Test.qrc">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\demo\Widgets_Test\Widgets_Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\demo\Widgets_Test\camera_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

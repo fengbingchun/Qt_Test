@@ -116,11 +116,13 @@
     <QtRcc Include="..\..\demo\Widgets_Test\Widgets_Test.qrc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\demo\Widgets_Test\camera_dialog.cpp" />
     <ClCompile Include="..\..\demo\Widgets_Test\main.cpp" />
     <ClCompile Include="..\..\demo\Widgets_Test\Widgets_Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\demo\logger.hpp" />
+    <QtMoc Include="..\..\demo\Widgets_Test\camera_dialog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

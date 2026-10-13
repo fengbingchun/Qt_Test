@@ -1,6 +1,5 @@
 ﻿#include "widgets_tesT.h"
-#include <QtWidgets/QApplication>
-#include <QDebug>
+#include <QApplication>
 #include <QFile>
 
 int main(int argc, char *argv[])
