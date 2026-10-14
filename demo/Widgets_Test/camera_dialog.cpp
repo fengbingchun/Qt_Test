@@ -1,9 +1,11 @@
 #include "camera_dialog.h"
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <opencv2/opencv.hpp>
 #include "logger.hpp"
 
 // CameraDialog继承自QDialog,所以创建CameraDialog对象时,必须先构造它的基类QDialog,然后才能执行CameraDialog自己的构造函数体;
-// 若没有显示指定基类构造函数(QDialog(parent)),编译器会尝试调用QDialog的默认构造函数，相当于没有把parent传给基类
+// 若没有显示指定基类构造函数(QDialog(parent)),编译器会尝试调用QDialog的默认构造函数,相当于没有把parent传给基类
 CameraDialog::CameraDialog(QWidget* parent):QDialog(parent) 
 {
     setWindowTitle(tr("摄像头"));
@@ -13,20 +15,24 @@ CameraDialog::CameraDialog(QWidget* parent):QDialog(parent)
     label_cap_->setStyleSheet("background-color:#000000;");
     label_cap_->setAlignment(Qt::AlignCenter);
     label_cap_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    label_cap_->setMinimumSize(1, 1);
+    label_cap_->setMinimumSize(200, 150);
     label_cap_->installEventFilter(this);
 
     button_open_ = new QPushButton("Open", this);
     button_close_ = new QPushButton("Close", this);
     button_close_->setEnabled(false);
 
-    // 虽然layout是局部变量，但它指向的QVBoxLayout对象并不会在构造函数结束时销毁,this是它的父对象. Qt的对象树会管理它的生命周期
+    // 虽然layout是局部变量,但它指向的QVBoxLayout对象并不会在构造函数结束时销毁,this是它的父对象. Qt的对象树会管理它的生命周期
     // 如果以后还需要动态调整布局,例如动态增加控件,可以将其定义为成员变量: QVBoxLayout* layout_{ nullptr };
     auto* layout = new QVBoxLayout(this);
     layout->setContentsMargins(2, 2, 2, 2); // 设置布局内边距(布局边缘和它内部子控件之间的空白距离,单位像素)
-    layout->addWidget(label_cap_);
-    layout->addWidget(button_open_);
-    layout->addWidget(button_close_);
+    layout->addWidget(label_cap_, 1);
+
+    auto* button_layout = new QHBoxLayout();
+    button_layout->addWidget(button_open_, 1);
+    button_layout->addWidget(button_close_, 1);
+
+    layout->addLayout(button_layout, 0);
 
     connect(button_open_, &QPushButton::clicked, this, &CameraDialog::start_capture);
     connect(button_close_, &QPushButton::clicked, this, &CameraDialog::close_capture);

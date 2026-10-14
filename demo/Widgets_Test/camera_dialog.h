@@ -1,10 +1,10 @@
 #pragma once
 
 #include <thread>
+#include <atomic>
 #include <QDialog>
 #include <QLabel>
 #include <QPushButton>
-#include <QVBoxLayout>
 #include <QEvent>
 
 class DisplayLabel : public QLabel { // 解决QLabel控件在运行时不能缩小的情况

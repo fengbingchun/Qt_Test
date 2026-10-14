@@ -5,11 +5,6 @@
 #include "logger.hpp"
 #include "camera_dialog.h"
 
-/* Blog:
-* https://blog.csdn.net/fengbingchun/article/details/128727514
-* https://blog.csdn.net/fengbingchun/article/details/146457607
-*/
-
 class Widgets_Test : public QMainWindow
 {
     Q_OBJECT
